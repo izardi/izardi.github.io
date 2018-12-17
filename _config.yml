@@ -38,9 +38,7 @@ permalink: /:categories/:title.html
 
 social_media:
   github_url: https://github.com/yh-cs
-  weibo_url: http://weibo.com/u/2313016370
-  zhihu_url: https://www.zhihu.com/people/yu-hao-25-59/activities
-  linkedin_url: 
+  v2ex_url: https://www.v2ex.com/member/yuhhai
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
