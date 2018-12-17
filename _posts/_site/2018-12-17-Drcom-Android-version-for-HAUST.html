@@ -1,0 +1,40 @@
+<p>实在是忍受不了哆点的卡顿，于是从github上找到了大佬的项目，动手自己适配了一个。第一次做安卓踩了不少的坑，真是头发都白了。主要是gradle一直build falied，去CSDN看各种解决方案都没有用，后来挂上ssr,设置proxy(端口1080，SOCKS5), 结果AS下载了一个东西就编译过了真是被墙坑哭了(F**K GFW)</p>
+
+<h2 id="project">project</h2>
+<p><a href="https://github.com/yh-cs/DrcomAndroidHAUST">DrcomAndroidHAUST</a></p>
+<h2 id="screenshot">screenshot</h2>
+<p><img src="https://github.com/yh-cs/yh-cs.github.io/blob/master/img/Screenshot_20181217.png" alt="index" /></p>
+<h2 id="referenced">referenced</h2>
+<p><a href="https://github.com/drcoms">drcoms</a>
+<a href="https://github.com/wintercoder">wintercoder</a>
+<a href="https://github.com/drcoms/jlu-drcom-client/tree/master/jlu-drcom-java">jlu-drcom-java</a></p>
+<h2 id="compatibility">compatibility</h2>
+<p>仅支持6.0以上的设备</p>
+<h2 id="details">details</h2>
+<p>删除</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private Button btnLogout;
+private void showNotification();
+public void notifyLogout();
+private boolean logout() throws IOException;
+private byte[] makeLogoutPacket();
+</code></pre></div></div>
+<p>删除了通知栏通知，android9.0后台限制比较严格，留个通知息屏就没了，索性删除了
+河科大的认证服务器地址为</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>210.43.0.195
+</code></pre></div></div>
+<p>河南科技大学并不需要keepAliveVer理论上打开一次退出就可以了，但并未删除相应的模块，以防别的学院需要</p>
+
+<h2 id="restrict">restrict</h2>
+<p>安卓工程用的是 api28 只能运行再安卓系统版本6.0及以上的设备，6.0以下的话会报错。</p>
+
+<h2 id="bug-find">Bug find</h2>
+<p>发现大佬一处bug</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  // 解锁WifiLock
+    public void releaseWifiLock() {
+        // 判断时候锁定
+        if (mWifiLock.isHeld()) {
+            mWifiLock.acquire();
+        }
+    }
+</code></pre></div></div>
+<p>这里解锁应该是 mWifiLock.release() 不太重要所以抱着不打扰的心态并没有提pr</p>
