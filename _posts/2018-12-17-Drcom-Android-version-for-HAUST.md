@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "河南科技大学third-part上网认证客户端"
+title: "河南科技大学third-party上网认证客户端"
 date: 2018-12-17
 categories: java
 tags: [java, andriod, drcom]
