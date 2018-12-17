@@ -7,6 +7,9 @@ tags: [java, andriod, drcom]
 ---
 
 实在是忍受不了哆点的卡顿，于是从github上找到了大佬的项目，动手自己适配了一个。第一次做安卓踩了不少的坑，真是头发都白了。主要是gradle一直build falied，去CSDN看各种解决方案都没有用，后来挂上ssr,设置proxy(端口1080，SOCKS5), 结果AS下载了一个东西就编译过了真是被墙坑哭了(F**K GFW)
+
+## project
+[DrcomAndroidHAUST](https://github.com/yh-cs/DrcomAndroidHAUST)
 ## screenshot
 ![index](https://github.com/yh-cs/yh-cs.github.io/blob/master/img/Screenshot_20181217.png)
 ## referenced
