@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>
+    
+      河南科技大学third-part上网认证客户端 &middot; yuhao's Blog
+    
+  </title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+        inlineMath: [ ['$','$'] ],
+        displayMath: [ ['$$','$$'] ],
+        processEscapes: true,
+      }
+    });
+  </script>
+  
+
+  <!-- code highlighting-->
+  <link rel="stylesheet" href="/lib/highlight/styles/hybrid.css">
+  <script src="/lib/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>hljs.configure({ ignore: ['text'] });</script>
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <header class="header">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default .navbar-static-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/" style="color:#333">yuhao's Blog</a>
+        <p class="navbar-text">God does not play dice.</p>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-search">
+            <form class="navbar-form navbar-left" role="search" id="search-form">
+              <div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" style="color:#777">Go!</button>
+                  </span>
+                  <input type="text" id="search-input" class="form-control" placeholder="Search">
+                  
+              </div>
+            </form>
+          </li>
+          <li>
+            <a href="/archives.html">Archives</a>
+          </li>
+          <li>
+            <a href="/categories.html">Categories</a>
+          </li>
+          <li>
+            <a href="/tags.html">Tags</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  
+    <div class="container">
+  <div class="row-fluid main">
+    <div class="col-md-9 content">
+      <article class="post">
+        <h1 class="post-title">河南科技大学third-part上网认证客户端</h1>
+
+        <div class="post-info">
+          <span class="post-date">17 Dec 2018</span>
+           | 
+            <span class="fa fa-folder-open" aria-hidden="true">
+            
+              <a class="post-categories" href="/categories.html#java">java</a>
+            
+            </span>
+          
+           | 
+            <span class="fa fa-tag" aria-hidden="true">
+            
+              <a class="post-tags" href="/tags.html#java">java</a>
+            
+              <a class="post-tags" href="/tags.html#andriod">andriod</a>
+            
+              <a class="post-tags" href="/tags.html#drcom">drcom</a>
+            
+            </span>
+          
+        </div>
+
+        <hr>
+        <div class="post-content">
+          <p>实在是忍受不了哆点的卡顿，于是从github上找到了大佬的项目，动手自己适配了一个。第一次做安卓踩了不少的坑，真都是头发都白了。主要是gradle一直build falid，去CSDN看各种解决方案都没有用，后来挂上ssr,设置proxy(端口1080，SOCKS5), 结果AS下载了一个东西就编译过了真是被墙坑哭了(F..K GFW)。</p>
+
+<p>#screenshot</p>
+
+<p>#referenced</p>
+
+<p>#compatibility</p>
+
+<p>#details
+主要删除</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private Button btnLogout;
+private void showNotification();
+public void notifyLogout();
+private boolean logout() throws IOException;
+private byte[] makeLogoutPacket();
+</code></pre></div></div>
+<p>删除了通知栏通知，android9.0后台限制比较严格，留个通知息屏就没了，索性删除了
+河科大的认证服务器地址为</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>210.43.0.195
+</code></pre></div></div>
+<p>河南科技大学并不需要keepAliveVer理论上打开一次退出就可以了，但并未删除相应的模块，以防别的学院需要</p>
+
+<p>#restrict
+安卓工程用的是 api28 只能运行再安卓系统版本6.0及以上的设备，6.0以下的话会报错。（应该没大学生用那么老的设备了吧）</p>
+
+<p>#funny
+发现大佬一处bug</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  // 解锁WifiLock
+    public void releaseWifiLock() {
+        // 判断时候锁定
+        if (mWifiLock.isHeld()) {
+            mWifiLock.acquire();
+        }
+    }
+</code></pre></div></div>
+<p>这里解锁应该是 mWifiLock.release() 不太重要所以抱着不打扰的心态并没有提pr</p>
+
+        </div>
+        <br><br>
+      </article>
+
+      <nav class="post-pagination">
+        
+        <a href="/web/static-website-with-jekyll.html" class="btn previous" title="从WordPress到静态网站">&larr; 从WordPress到静态网站</a>
+        
+        
+      </nav>
+
+      <hr>
+
+      
+      <aside class="related">
+        <h3>Related Posts</h3>
+        <ul class="related-posts">
+          
+            <li>
+              <a href="/web/static-website-with-jekyll.html">
+                从WordPress到静态网站
+                <small><time datetime="2017-08-01T20:00:00+08:00">01 Aug 2017</time></small>
+              </a>
+            </li>
+          
+        </ul>
+      </aside>
+      
+
+      <!-- Gitment -->
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: 'yuhao',
+  repo: 'yh-cs.github.io',
+  oauth: {
+    client_id: '5cbd280dd9b27339aee6',
+    client_secret: '18164941d46a714a7577cb7d14e642936ad2ac16',
+  },
+})
+gitment.render('container')
+</script>
+    </div>
+    
+    <div class="col-md-3 post-sidebar">
+      <div class="sidebar-content" id="sidebar">
+  <nav class="header-list-sidebar">
+    <ul id="sideNav" class="nav headers-sidenav">
+        <!-- code will be generated in TOC.js -->
+    </ul>
+  </nav>
+</div>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer">
+  <div class="copyright">
+      Copyright &copy; <time datetime="2018-12-17T18:05:57+08:00">2018</time> <a href="http://localhost:4000">yuhao</a> | Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> | Designed by <a href="http://localhost:4000">yuhao</a>
+  </div>
+</footer>
+
+    <a href="#top" class="back-to-top">^</a>
+
+<!--      -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/assets/js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- TOC -->
+    <script src="/assets/js/toc/TOC.js"></script>
+
+    <script>$("#search-form").submit(function(event){
+      var query = document.getElementById("search-input").value;
+      window.open("http://google.com/search?q=" + query + "%20site:" + "yh-cs.github.io");
+    });</script>
+  </body>
+</html>
