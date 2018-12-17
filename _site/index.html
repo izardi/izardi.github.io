@@ -133,14 +133,16 @@
         <div class="post-excerpt">
           <p>实在是忍受不了哆点的卡顿，于是从github上找到了大佬的项目，动手自己适配了一个。第一次做安卓踩了不少的坑，真都是头发都白了。主要是gradle一直build falid，去CSDN看各种解决方案都没有用，后来挂上ssr,设置proxy(端口1080，SOCKS5), 结果AS下载了一个东西就编译过了真是被墙坑哭了(F..K GFW)。</p>
 
-<p>#screenshot</p>
-
-<p>#referenced</p>
-
-<p>#compatibility</p>
-
-<p>#details
-主要删除</p>
+<h2 id="screenshot">screenshot</h2>
+<p><img src="https://github.com/yh-cs/yh-cs.github.io/blob/master/img/Screenshot_20181217.png" alt="index" /></p>
+<h2 id="referenced">referenced</h2>
+<p><a href="https://github.com/drcoms">drcoms</a>
+<a href="https://github.com/wintercoder">wintercoder</a>
+<a href="https://github.com/drcoms/jlu-drcom-client/tree/master/jlu-drcom-java">jlu-drcom-java</a></p>
+<h2 id="compatibility">compatibility</h2>
+<p>仅支持6.0以上的设备</p>
+<h2 id="details">details</h2>
+<p>删除</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private Button btnLogout;
 private void showNotification();
 public void notifyLogout();
@@ -153,11 +155,11 @@ private byte[] makeLogoutPacket();
 </code></pre></div></div>
 <p>河南科技大学并不需要keepAliveVer理论上打开一次退出就可以了，但并未删除相应的模块，以防别的学院需要</p>
 
-<p>#restrict
-安卓工程用的是 api28 只能运行再安卓系统版本6.0及以上的设备，6.0以下的话会报错。（应该没大学生用那么老的设备了吧）</p>
+<h2 id="restrict">restrict</h2>
+<p>安卓工程用的是 api28 只能运行再安卓系统版本6.0及以上的设备，6.0以下的话会报错。</p>
 
-<p>#funny
-发现大佬一处bug</p>
+<h2 id="bug-find">Bug find</h2>
+<p>发现大佬一处bug</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  // 解锁WifiLock
     public void releaseWifiLock() {
         // 判断时候锁定
@@ -241,6 +243,9 @@ private byte[] makeLogoutPacket();
 
     <div class="col-md-3 main-sidebar">
       <div class="sidebar-content" id="sidebar">
+  
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28111190&auto=1&height=66"></iframe>
+
   <div class="author-avatar">
     <img src="/assets/img/author.jpg" alt="lszero">
   </div>
@@ -355,7 +360,7 @@ private byte[] makeLogoutPacket();
 
     <footer class="footer">
   <div class="copyright">
-      Copyright &copy; <time datetime="2018-12-17T18:05:57+08:00">2018</time> <a href="http://localhost:4000">yuhao</a> | Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> | Designed by <a href="http://localhost:4000">yuhao</a>
+      Copyright &copy; <time datetime="2018-12-17T19:45:00+08:00">2018</time> <a href="http://localhost:4000">yuhao</a> | Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> | Designed by <a href="http://localhost:4000">yuhao</a>
   </div>
 </footer>
 
